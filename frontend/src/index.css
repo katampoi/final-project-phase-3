@@ -103,3 +103,10 @@
    color: whitesmoke;
    border-radius: 15px;
  }
+
+ .airline{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 10;
+ }

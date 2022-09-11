@@ -16,11 +16,11 @@ function Airline() {
 
   
    return (
-    <div>
+    <div className='airline'>
               { airlines.map((airline) => (
                 <ol id={airline.id} key={airline.id} >
                 <p>Name: {airline.name}</p>
-                {/* <p>image_url:{airline.image_url}</p> */}
+                <p>image_url:{airline.image_url}</p>
                 <p>slug: {airline.slug}</p>
                 </ol>
             ))}
