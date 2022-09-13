@@ -19,7 +19,10 @@ function NewPost({onHandleAddPost, setIsFilledIn}){
         fetch("http://localhost:9292/reviews", {
             method: "POST",
             headers: {"Content-Type":"application/json"},
-            body: JSON.stringify(newObj)
+            body: JSON.stringify({
+                comment: comment,
+                score: score,
+              }),
         })
         .then((resp) => resp.json())
         .then((newBlog) => onHandleAddPost(newBlog) )
