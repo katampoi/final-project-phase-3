@@ -3,25 +3,18 @@ import React, {useState} from "react";
 
 
 function NewPost({onHandleAddPost, setIsFilledIn}){
-    const [date, setDate]=useState('')
-    const [image_url, setAuthor]=useState('')
-    const [slug, setTopic]=useState('')
-    const [description, setContent]=useState('')
+    const [ setDate]=useState('')
+    const [setAuthor]=useState('')
+    const [setTopic]=useState('')
+    const [setContent]=useState('')
     function handleSubmit(e){
          e.preventDefault()
         e.target.reset();
-        const newObj = {
-            "Date":date,
-            "image_url":image_url,
-            "slug":slug,
-            "description":description
-        }
         fetch("http://localhost:9292/reviews", {
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({
-                comment: comment,
-                score: score,
+               
               }),
         })
         .then((resp) => resp.json())

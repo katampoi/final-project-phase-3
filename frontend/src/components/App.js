@@ -3,7 +3,8 @@ import Nav from './Nav'
 import About from './About'
 import View from './View'
 import Airline from './Airline'
-import Add from './Add'
+// import Review from './Review'
+import NewReview from './NewReview'
 
 
 
@@ -15,9 +16,11 @@ function App() {
       <About />
       <View />
       <Airline />
-      <Add />
+      {/* <Review /> */}
+      <NewReview />
     </div>
   )
 }
+
 
 export default App

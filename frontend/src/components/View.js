@@ -11,7 +11,6 @@ function View(){
     return(
       <div>
         <FaStar />
-        hello world!
       </div>
 
     )
