@@ -3,7 +3,7 @@ import Nav from './Nav'
 import About from './About'
 import View from './View'
 import Airline from './Airline'
-// import Review from './Review'
+import Review from './Review'
 import NewReview from './NewReview'
 
 
@@ -16,8 +16,8 @@ function App() {
       <About />
       <View />
       <Airline />
-      {/* <Review /> */}
       <NewReview />
+      {/* <Review /> */}
     </div>
   )
 }

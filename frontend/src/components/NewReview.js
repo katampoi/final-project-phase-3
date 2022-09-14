@@ -2,15 +2,12 @@ import React, { useState } from 'react'
 
 function NewReview({onAddReview}) {
     const [formData, setFormData] = useState({
-        body: ""
     })
-
-    // function handleChange(e){
-    //     setFormData({...formData, [e.target.name]: e.target.value})
-    // }
 
     function handleSubmit(e){
         e.preventDefault();
+
+        console.log(formData)
 
         fetch("http://localhost:9292/reviews", {
             method: "POST",
@@ -21,7 +18,6 @@ function NewReview({onAddReview}) {
     })
            .then(response => response.json())
            .then((data) => {
-           onAddReview(data)
            setFormData(data)
     })
 }
