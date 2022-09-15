@@ -121,6 +121,43 @@
   padding: 3rem;
   border-radius: 2rem;
  }
- .classname{
-  text-align: center;
- }
+.new{
+  padding-left: 28rem;
+
+}
+.rev{
+  display: row;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+.submit{
+  color: white;
+  margin-left: 20px;
+  background:  rgb(42, 126, 42);
+  border-radius: 3px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.cust-rev{
+  background-color: rgb(220, 222, 228);
+  padding-bottom: 2rem;
+}
+
+.cust-rev h3{
+  color: green;
+  font-size: 25px;
+  margin-left: 40px;
+  padding-top: 1rem;
+}
+
+.del{
+  color: white;
+  border-radius: 5px;
+  border: 2rem 2rem 2rem 2rem;
+  background-color: rgb(42, 126, 42);
+  margin-left: 2rem;
+  margin-top: 5px;
+}

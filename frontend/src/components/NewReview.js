@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 function NewReview({onAddReview}) {
     const [formData, setFormData] = useState({
+        
     })
 
     function handleSubmit(e){
@@ -30,7 +31,7 @@ function NewReview({onAddReview}) {
           });
     }
   return (
-    <div>
+    <div className='new'>
         <p style={{marginLeft:"50px"}}>Add Your Review</p>
         <form className='review-form' onSubmit={handleSubmit}>
             <input className="input" type="text" name="body" placeholder='Add Your Comment...'  onChange={handleChange} />
