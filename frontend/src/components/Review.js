@@ -1,8 +1,7 @@
 import {useEffect} from 'react'
-import { useParams } from 'react-router-dom';
 
 function Review({review, onDelete}) {
-  let { id } = useParams()
+ 
 
   useEffect(() => {
     fetch (`http://localhost:9292/reviews`)
@@ -13,7 +12,7 @@ function Review({review, onDelete}) {
   })
 
   function handleDeleteClick() {
-    fetch(`http://localhost:9292/reviews/${id}`, {
+    fetch(`http://localhost:9292/reviews/${review.id}`, {
       method: "DELETE",
     })
       .then((resp) => resp.json())

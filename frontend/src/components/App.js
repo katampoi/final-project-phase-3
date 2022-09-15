@@ -19,14 +19,13 @@ function App() {
       })
     },[]);
 
-
-    function handleAddReview(newReview) {
-      setReviews([...reviews, newReview]);
+    function addReview (newReview){
+      setReviews([...reviews, newReview])
     }
-  
-    function handleDeleteReview(deletedReview){
-      const updatedReviews = reviews.filter((review) => review.id !== deletedReview.id)
-      setReviews(updatedReviews)
+
+    function deleteAirLine(deletedAirLine){
+      const updatedAirline = reviews.filter((review) => review.id !== deletedAirLine.id)
+      setReviews(updatedAirline)
     }
 
   return (
@@ -41,10 +40,10 @@ function App() {
       <h3>Our Reviews</h3>
       <ul className="Reviews">
         {reviews.map((review) => (
-          <Review id={review.id} key={review.id} review={review}  onDelete={handleDeleteReview} />
+          <Review id={review.id} key={review.id} review={review}  onDelete={deleteAirLine} />
         ))}
       </ul>
-      <NewReview onAddReview={handleAddReview}/>
+      <NewReview onAddReview={addReview}/>
     </div>
     </div>
   )

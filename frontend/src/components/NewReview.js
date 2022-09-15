@@ -2,13 +2,19 @@ import React, { useState } from 'react'
 
 function NewReview({onAddReview}) {
     const [formData, setFormData] = useState({
-        
+        body: ""
     })
+
+    function handleChange (e) {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+            
+          });
+        }
 
     function handleSubmit(e){
         e.preventDefault();
-
-        console.log(formData)
 
         fetch("http://localhost:9292/reviews", {
             method: "POST",
@@ -19,17 +25,11 @@ function NewReview({onAddReview}) {
     })
            .then(response => response.json())
            .then((data) => {
-           setFormData(data)
+            onAddReview(data)
+           setFormData({...formData,body:""})
     })
-}
-     console.log(formData) 
-    const handleChange = e => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-            
-          });
     }
+ 
   return (
     <div className='new'>
         <p style={{marginLeft:"50px"}}>Add Your Review</p>
@@ -40,5 +40,6 @@ function NewReview({onAddReview}) {
     </div>
   )
 }
+
 
 export default NewReview;
